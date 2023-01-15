@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title th:text="#{app.title}"></title>
+</head>
+<body>
+<span style="color:red" th:if="${showPasswordWarning != null}" th:text="#{app.password.expiry.warning(${showPasswordWarning})}"></span>
+<h3 th:text="#{app.locale.test}"></h3>
+<br/>
+<br/>
+<a th:href="@{/public/change-password}" th:text="#{app.change-password.title}"></a>
+<br/>
+<a th:href="@{/(lang=en)}">en</a>&nbsp;<a th:href="@{/(lang=fr)}">fr</a>
+</body>
+</html>
